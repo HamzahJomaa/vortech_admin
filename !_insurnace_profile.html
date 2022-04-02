@@ -1,0 +1,852 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Dashboard | Veltrix - Admin & Dashboard Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <link href="assets/libs/chartist/chartist.min.css" rel="stylesheet">
+    <!-- DataTables -->
+    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body data-sidebar="dark">
+
+<!-- Begin page -->
+<div id="layout-wrapper">
+
+
+    <header id="page-topbar">
+        <div class="navbar-header">
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+                <a href="index.html" class="logo logo-dark">
+                                <span class="logo-sm">
+                                    <img src="assets/images/theme/logo.png" alt="" height="22">
+                                </span>
+                    <span class="logo-lg">
+                                    <img src="assets/images/theme/logo.png" alt="" height="17">
+                                </span>
+                </a>
+
+                <a href="index.html" class="logo logo-light d-flex justify-content-center align-items-center">
+                                <span class="logo-sm">
+                                    <img src="assets/images/theme/logo.png" alt="" height="22">
+                                </span>
+                    <span class="logo-lg">
+                                    <img src="assets/images/theme/logo.png" alt="" height="30 ">
+                                </span>
+                    <h2 class="m-0 text-white ps-lg-3">Admin Panel</h2>
+                </a>
+            </div>
+
+            <div class="d-flex">
+                <!-- App Search-->
+                <form class="app-search d-none d-lg-block theme">
+                    <div class="position-relative">
+                        <span class="fa fa-search"></span>
+                        <input type="text" class="form-control" placeholder="Search...">
+                    </div>
+                </form>
+            </div>
+
+            <div class="d-flex">
+
+                <div class="dropdown d-inline-block">
+                    <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="mdi mdi-bell-ring-outline"></i>
+                        <span class="badge bg-danger rounded-pill">3</span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-notifications-dropdown">
+                        <div class="p-3">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h5 class="m-0 font-size-16"> Notifications (258) </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-simplebar style="max-height: 230px;">
+                            <a href="" class="text-reset notification-item">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar-xs">
+                                                    <span class="avatar-title bg-success rounded-circle font-size-16">
+                                                        <i class="mdi mdi-cart-outline"></i>
+                                                    </span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">Your order is placed</h6>
+                                        <div class="font-size-12 text-muted">
+                                            <p class="mb-1">Dummy text of the printing and typesetting industry.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="" class="text-reset notification-item">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar-xs">
+                                                    <span class="avatar-title bg-warning rounded-circle font-size-16">
+                                                        <i class="mdi mdi-message-text-outline"></i>
+                                                    </span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">New Message received</h6>
+                                        <div class="font-size-12 text-muted">
+                                            <p class="mb-1">You have 87 unread messages</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="" class="text-reset notification-item">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar-xs">
+                                                    <span class="avatar-title bg-info rounded-circle font-size-16">
+                                                        <i class="mdi mdi-glass-cocktail"></i>
+                                                    </span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">Your item is shipped</h6>
+                                        <div class="font-size-12 text-muted">
+                                            <p class="mb-1">It is a long established fact that a reader will</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="" class="text-reset notification-item">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar-xs">
+                                                    <span class="avatar-title bg-primary rounded-circle font-size-16">
+                                                        <i class="mdi mdi-cart-outline"></i>
+                                                    </span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">Your order is placed</h6>
+                                        <div class="font-size-12 text-muted">
+                                            <p class="mb-1">Dummy text of the printing and typesetting industry.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="" class="text-reset notification-item">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar-xs">
+                                                    <span class="avatar-title bg-danger rounded-circle font-size-16">
+                                                        <i class="mdi mdi-message-text-outline"></i>
+                                                    </span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">New Message received</h6>
+                                        <div class="font-size-12 text-muted">
+                                            <p class="mb-1">You have 87 unread messages</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="p-2 border-top">
+                            <div class="d-grid">
+                                <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
+                                    View all
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown d-inline-block">
+                    <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="rounded-circle header-profile-user" src="assets/images/users/user-4.jpg"
+                             alt="Header Avatar">
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <!-- item-->
+                        <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle font-size-17 align-middle me-1"></i> Profile</a>
+                        <a class="dropdown-item" href="#"><i class="mdi mdi-wallet font-size-17 align-middle me-1"></i> My Wallet</a>
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i class="mdi mdi-cog font-size-17 align-middle me-1"></i> Settings<span class="badge bg-success ms-auto">11</span></a>
+                        <a class="dropdown-item" href="#"><i class="mdi mdi-lock-open-outline font-size-17 align-middle me-1"></i> Lock screen</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-danger" href="#"><i class="bx bx-power-off font-size-17 align-middle me-1 text-danger"></i> Logout</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== Left Sidebar Start ========== -->
+    <div class="vertical-menu">
+
+        <div data-simplebar class="h-100">
+
+            <!--- Sidemenu -->
+            <div id="sidebar-menu">
+                <!-- Left Menu Start -->
+                <ul class="metismenu list-unstyled" id="side-menu">
+
+                    <li>
+                        <a href="index.html" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>User Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Insurance Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Inquiries Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Policy Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Content Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Email Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Setup</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>CRM</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Task Management</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Sidebar -->
+        </div>
+    </div>
+    <!-- Left Sidebar End -->
+
+
+
+
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="main-content">
+
+        <div class="page-content company-profile">
+            <div class="container-fluid">
+                <!-- start page title -->
+                <div class="page-title-box">
+                    <ol class="breadcrumb m-0">
+                        <li class="breadcrumb-item">Home</li>
+                        <li class="breadcrumb-item">Insurance Management</li>
+                        <li class="breadcrumb-item">Insurance Carrier Profile</li>
+                    </ol>
+                </div>
+                <!-- start page title -->
+                <div class="page-title-box">
+                    <div class="row align-items-center">
+                        <div class="col-md-12">
+                            <h1 class="page-title users text-black">Insurance Carrier Profile</h1>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title -->
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body p-lg-5">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="logo mb-lg-5">
+                                            <img src="./assets/images/theme/companies/logo02.png" alt="">
+                                        </div>
+                                        <div class="description text-black mt-lg-3">
+                                            <h2>Details:</h2>
+                                            <p>In fringilla ipsum sapien, sed fermentum nisl sollicitudin eu. Praesent pretium porttitor libero at porta. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec fermentum ultrices dui. Duis diam orci, placerat a libero in, consequat porttitor est. Curabitur vel felis at mi luctus ultricies. Fusce eget justo non leo fringilla lobortis quis sed metus. Aliquam sit amet purus non purus accumsan placerat et vitae arcu. In fringilla ipsum sapien, sed fermentum nisl sollicitudin eu. Praesent pretium porttitor libero at porta. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec fermentum ultrices dui. Duis diam orci, placerat a libero in, consequat porttitor est. Curabitur vel felis at mi luctus ultricies. Fusce eget justo non leo fringilla lobortis quis sed metus. Aliquam sit amet purus non purus accumsan placerat et vitae arcu.</p>
+                                            <h4>Contact Information: </h4>
+                                            <p class="m-0"><span class="fw-bolder">Address:</span>  Abu Dhabi, United Arab Emirates</p>
+                                            <p class="m-0"><span class="fw-bolder">Tel:</span> +971-50-1234567</p>
+                                            <p class="m-0"><span class="fw-bolder">Email:</span>  info@galaxyinsurance.ae</p>
+                                            <p class="m-0"><span class="fw-bolder">Website: </span>  Alsagr.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="card mini-stat bg-theme-primary card-theme" >
+                                            <div class="card-body">
+                                                <div class="mb-4 d-flex justify-content-between">
+                                                    <div class="title-card-theme">
+                                                        <h5 class="font-size-16 text-uppercase">Policies Sold</h5>
+                                                        <h4 class="fw-bold font-size-24 text-black">12,389</h4>
+                                                    </div>
+                                                    <div class="icon-theme-card green">
+                                                        <i class="ion ion-md-person"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="pt-2">
+                                                    <p class="text-gray mb-0 mt-1"> <span class="text-danger"> <i class="ion ion-md-arrow-dropdown"></i>
+                                                    </span> <span class="text-danger">12%</span> Since last month</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5 class="text-black">Sold Policies by Type</h5>
+                                        <div class="card bg-theme-primary card-theme" >
+                                            <div class="card-body">
+                                                <div id="animating-donut" class="ct-chart ct-golden-section" dir="ltr"></div>
+
+                                                <div class="row justify-content-center">
+                                                    <div class="col-sm-4">
+                                                        <div class="text-center">
+                                                            <p class="text-muted">Lorem Ipsum</p>
+                                                            <h4 class="mb-0 text-success">65%</h4>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <div class="text-center">
+                                                            <p class="text-muted">Lorem Ipsum</p>
+                                                            <h4 class="mb-0 text-warning">65%</h4>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <div class="text-center">
+                                                            <p class="text-muted">Lorem Ipsum</p>
+                                                            <h4 class="mb-0 fw-bold text-primary-theme">65%</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="card mini-stat bg-theme-primary card-theme" >
+                                            <div class="card-body">
+                                                <div class="mb-4 d-flex justify-content-between">
+                                                    <div class="title-card-theme">
+                                                        <h5 class="font-size-16 text-uppercase">Discounts</h5>
+                                                        <h4 class="fw-bold font-size-24 text-black">75.5%</h4>
+                                                    </div>
+                                                    <div class="icon-theme-card yellow">
+                                                        <i class="fa fas fa-chart-bar"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="progress mb-4">
+                                                    <div class="progress-bar bg-theme-primary-blue" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5 class="text-black">Policy growth rate</h5>
+                                        <div class="card bg-theme-primary card-theme">
+                                            <div class="card-body">
+                                                <!-- Nav tabs -->
+                                                <ul class="nav nav-tabs nav-tabs-custom border-0" role="tablist">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link active" data-bs-toggle="tab" href="#current" role="tab">
+                                                            <span class="d-none d-md-block">Home</span><span class="d-block d-md-none"><i class="mdi mdi-home-variant h5"></i></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" data-bs-toggle="tab" href="#prev" role="tab">
+                                                            <span class="d-none d-md-block">Profile</span><span class="d-block d-md-none"><i class="mdi mdi-account h5"></i></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <div class="tab-content pt-lg-5">
+                                                    <div class="tab-pane active" id="current" role="tabpanel">
+                                                        <div id="chart-with-area" class="ct-chart ct-golden-section" dir="ltr"></div>
+                                                    </div>
+                                                    <div class="tab-pane" id="prev" role="tabpanel">
+                                                        <div id="chart-with-area-prev" class="ct-chart ct-golden-section" dir="ltr"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-lg-5">
+                                    <h3 class="text-black">Services & Products</h3>
+                                    <div class="col-lg-4">
+                                        <div class="card mini-stat bg-theme-primary card-theme">
+                                            <div class="card-body p-0">
+                                                <div class="icon text-center">
+                                                    <img src="./assets/images/theme/box-icon.png" alt="">
+                                                </div>
+                                                <div class="description text-center p-3">
+                                                    <h3>Lorem Ipsum</h3>
+                                                    <p class="m-0">Consectetur adipiscing elit. Etiam sed neque sit amet leo lacinia pulvinar. Donec a elit et lorem porttitor sed mauris.</p>
+                                                </div>
+                                                <div class="lower-card d-flex justify-content-between p-3">
+                                                    <div class="clock d-flex">
+                                                        <i class="m-0 mdi mdi-clock"></i>
+                                                        <p class="m-0">Updated 2 hr ago</p>
+                                                    </div>
+                                                    <div class="download d-flex">
+                                                        <i class="m-0 mdi mdi-download"></i>
+                                                        <p class="m-0">Updated 2 hr ago</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="card mini-stat bg-theme-primary card-theme">
+                                            <div class="card-body p-0">
+                                                <div class="icon text-center">
+                                                    <img src="./assets/images/theme/box-icon.png" alt="">
+                                                </div>
+                                                <div class="description text-center p-3">
+                                                    <h3>Lorem Ipsum</h3>
+                                                    <p class="m-0">Consectetur adipiscing elit. Etiam sed neque sit amet leo lacinia pulvinar. Donec a elit et lorem porttitor sed mauris.</p>
+                                                </div>
+                                                <div class="lower-card d-flex justify-content-between p-3">
+                                                    <div class="clock d-flex">
+                                                        <i class="m-0 mdi mdi-clock"></i>
+                                                        <p class="m-0">Updated 2 hr ago</p>
+                                                    </div>
+                                                    <div class="download d-flex">
+                                                        <i class="m-0 mdi mdi-download"></i>
+                                                        <p class="m-0">Updated 2 hr ago</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="card mini-stat bg-theme-primary card-theme">
+                                            <div class="card-body p-0">
+                                                <div class="icon text-center">
+                                                    <img src="./assets/images/theme/box-icon.png" alt="">
+                                                </div>
+                                                <div class="description text-center p-3">
+                                                    <h3>Lorem Ipsum</h3>
+                                                    <p class="m-0">Consectetur adipiscing elit. Etiam sed neque sit amet leo lacinia pulvinar. Donec a elit et lorem porttitor sed mauris.</p>
+                                                </div>
+                                                <div class="lower-card d-flex justify-content-between p-3">
+                                                    <div class="clock d-flex">
+                                                        <i class="m-0 mdi mdi-clock"></i>
+                                                        <p class="m-0">Updated 2 hr ago</p>
+                                                    </div>
+                                                    <div class="download d-flex">
+                                                        <i class="m-0 mdi mdi-download"></i>
+                                                        <p class="m-0">Updated 2 hr ago</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="title">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <h3 class="text-black">Repairs supplied by agency</h3>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="float-end d-none d-md-block">
+                                                    <div class="btn-group me-1 mt-2 filter">
+                                                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            Filter by year
+                                                            <i class="mdi mdi-chevron-down"></i>
+                                                        </button>
+                                                        <div class="dropdown-menu">
+                                                            <button class="dropdown-item year" id="2010">2010</button>
+                                                            <button class="dropdown-item year" id="2011">2011</button>
+                                                            <button class="dropdown-item year" id="2012">2012</button>
+                                                            <button class="dropdown-item year" id="2013">2013</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="btn-group me-1 mt-2 filter">
+                                                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            Month
+                                                            <i class="mdi mdi-chevron-down"></i>
+                                                        </button>
+                                                        <div class="dropdown-menu">
+                                                            <button class="dropdown-item month" id="01">Jan</button>
+                                                            <button class="dropdown-item month" id="02">Feb</button>
+                                                            <button class="dropdown-item month" id="03">March</button>
+                                                            <button class="dropdown-item month" id="04">April</button>
+                                                            <button class="dropdown-item month" id="05">May</button>
+                                                            <button class="dropdown-item month" id="06">June</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="btn-group me-1 mt-2 filter">
+                                                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            Type
+                                                            <i class="mdi mdi-chevron-down"></i>
+                                                        </button>
+                                                        <div class="dropdown-menu type">
+                                                            <button class="dropdown-item type" id="type01">Type 1</button>
+                                                            <button class="dropdown-item type" id="type02">Type 2</button>
+                                                            <button class="dropdown-item type" id="type03">Type 3</button>
+                                                            <button class="dropdown-item type" id="type04">Type 4</button>
+                                                            <button class="dropdown-item type" id="type05">Type 5</button>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w-100">
+                                        <div class="listing">
+                                            <table id="dashboard-table-insurance-profile" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                                <thead>
+                                                <tr>
+                                                    <th>Repair No</th>
+                                                    <th>Name</th>
+                                                    <!-- Make sure to leave the formate date as dd/mm/yyyy-->
+                                                    <th>Repair Date</th>
+                                                    <th>Price</th>
+                                                    <th>Category</th>
+                                                    <th>Contact No.</th>
+                                                    <th>Type</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td class="pt-lg-3">#328402</td>
+                                                    <td class="pt-lg-3">John Doe</td>
+                                                    <td class="pt-lg-3">24/02/2010</td>
+                                                    <td class="pt-lg-3">200$</td>
+                                                    <td class="pt-lg-3">Lorem Ipsum</td>
+                                                    <td class="pt-lg-3">123-456-789-0</td>
+                                                    <td class="pending pt-lg-2"><p>Pending</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="pt-lg-3">#328402</td>
+                                                    <td class="pt-lg-3">John Doe</td>
+                                                    <td class="pt-lg-3">24/03/2010</td>
+                                                    <td class="pt-lg-3">200$</td>
+                                                    <td class="pt-lg-3">Lorem Ipsum</td>
+                                                    <td class="pt-lg-3">123-456-789-0</td>
+                                                    <td class="pending pt-lg-2"><p>Pending</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="pt-lg-3">#328402</td>
+                                                    <td class="pt-lg-3">John Doe</td>
+                                                    <td class="pt-lg-3">24/04/2010</td>
+                                                    <td class="pt-lg-3">200$</td>
+                                                    <td class="pt-lg-3">Lorem Ipsum</td>
+                                                    <td class="pt-lg-3">123-456-789-0</td>
+                                                    <td class="pending pt-lg-2"><p>Pending</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="pt-lg-3">#328402</td>
+                                                    <td class="pt-lg-3">John Doe</td>
+                                                    <td class="pt-lg-3">24/04/2010</td>
+                                                    <td class="pt-lg-3">200$</td>
+                                                    <td class="pt-lg-3">Lorem Ipsum</td>
+                                                    <td class="pt-lg-3">123-456-789-0</td>
+                                                    <td class="pending pt-lg-2"><p>Pending</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="pt-lg-3">#328402</td>
+                                                    <td class="pt-lg-3">John Doe</td>
+                                                    <td class="pt-lg-3">24/02/2010</td>
+                                                    <td class="pt-lg-3">200$</td>
+                                                    <td class="pt-lg-3">Lorem Ipsum</td>
+                                                    <td class="pt-lg-3">123-456-789-0</td>
+                                                    <td class="pending pt-lg-2"><p>Pending</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="pt-lg-3">#328402</td>
+                                                    <td class="pt-lg-3">John Doe</td>
+                                                    <td class="pt-lg-3">24/01/2010</td>
+                                                    <td class="pt-lg-3">200$</td>
+                                                    <td class="pt-lg-3">Lorem Ipsum</td>
+                                                    <td class="pt-lg-3">123-456-789-0</td>
+                                                    <td class="pending pt-lg-2"><p>Pending</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="pt-lg-3">#328402</td>
+                                                    <td class="pt-lg-3">John Doe</td>
+                                                    <td class="pt-lg-3">24/03/2010</td>
+                                                    <td class="pt-lg-3">200$</td>
+                                                    <td class="pt-lg-3">Lorem Ipsum</td>
+                                                    <td class="pt-lg-3">123-456-789-0</td>
+                                                    <td class="pending pt-lg-2"><p>Pending</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="pt-lg-3">#328402</td>
+                                                    <td class="pt-lg-3">John Doe</td>
+                                                    <td class="pt-lg-3">24/05/2010</td>
+                                                    <td class="pt-lg-3">200$</td>
+                                                    <td class="pt-lg-3">Lorem Ipsum</td>
+                                                    <td class="pt-lg-3">123-456-789-0</td>
+                                                    <td class="pending pt-lg-2"><p>Pending</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="pt-lg-3">#328402</td>
+                                                    <td class="pt-lg-3">John Doe</td>
+                                                    <td class="pt-lg-3">24/03/2010</td>
+                                                    <td class="pt-lg-3">200$</td>
+                                                    <td class="pt-lg-3">Lorem Ipsum</td>
+                                                    <td class="pt-lg-3">123-456-789-0</td>
+                                                    <td class="pending pt-lg-2"><p>Pending</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="pt-lg-3">#328402</td>
+                                                    <td class="pt-lg-3">John Doe</td>
+                                                    <td class="pt-lg-3">24/03/2011</td>
+                                                    <td class="pt-lg-3">200$</td>
+                                                    <td class="pt-lg-3">Lorem Ipsum</td>
+                                                    <td class="pt-lg-3">123-456-789-0</td>
+                                                    <td class="pending pt-lg-2"><p>Pending</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="pt-lg-3">#328402</td>
+                                                    <td class="pt-lg-3">John Doe</td>
+                                                    <td class="pt-lg-3">24/03/2013</td>
+                                                    <td class="pt-lg-3">200$</td>
+                                                    <td class="pt-lg-3">Lorem Ipsum</td>
+                                                    <td class="pt-lg-3">123-456-789-0</td>
+                                                    <td class="pending pt-lg-2"><p>Pending</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="pt-lg-3">#328402</td>
+                                                    <td class="pt-lg-3">John Doe</td>
+                                                    <td class="pt-lg-3">24/03/2010</td>
+                                                    <td class="pt-lg-3">200$</td>
+                                                    <td class="pt-lg-3">Lorem Ipsum</td>
+                                                    <td class="pt-lg-3">123-456-789-0</td>
+                                                    <td class="pending pt-lg-2"><p>Pending</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="pt-lg-3">#328402</td>
+                                                    <td class="pt-lg-3">John Doe</td>
+                                                    <td class="pt-lg-3">24/03/2010</td>
+                                                    <td class="pt-lg-3">200$</td>
+                                                    <td class="pt-lg-3">Lorem Ipsum</td>
+                                                    <td class="pt-lg-3">123-456-789-0</td>
+                                                    <td class="pending pt-lg-2"><p>Pending</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="pt-lg-3">#328402</td>
+                                                    <td class="pt-lg-3">John Doe</td>
+                                                    <td class="pt-lg-3">24/03/2010</td>
+                                                    <td class="pt-lg-3">200$</td>
+                                                    <td class="pt-lg-3">Lorem Ipsum</td>
+                                                    <td class="pt-lg-3">123-456-789-0</td>
+                                                    <td class="pending pt-lg-2"><p>Pending</p></td>
+                                                </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end row -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div> <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+ 
+
+    </div>
+    <!-- end main content-->
+
+</div>
+<!-- END layout-wrapper -->
+
+<!-- Right Sidebar -->
+<div class="right-bar">
+    <div data-simplebar class="h-100">
+        <div class="rightbar-title px-3 py-4">
+            <a href="javascript:void(0);" class="right-bar-toggle float-end">
+                <i class="mdi mdi-close noti-icon"></i>
+            </a>
+            <h5 class="m-0">Settings</h5>
+        </div>
+
+        <!-- Settings -->
+        <hr class="mt-0" />
+        <h6 class="text-center">Choose Layouts</h6>
+
+        <div class="p-4">
+            <div class="mb-2">
+                <img src="assets/images/layouts/layout-1.jpg" class="img-fluid img-thumbnail" alt="">
+            </div>
+            <div class="form-check form-switch mb-3">
+                <input type="checkbox" class="form-check-input theme-choice" id="light-mode-switch" checked />
+                <label class="form-check-label" for="light-mode-switch">Light Mode</label>
+            </div>
+
+            <div class="mb-2">
+                <img src="assets/images/layouts/layout-2.jpg" class="img-fluid img-thumbnail" alt="">
+            </div>
+            <div class="form-check form-switch mb-3">
+                <input type="checkbox" class="form-check-input theme-choice" id="dark-mode-switch" data-bsStyle="assets/css/bootstrap-dark.min.css"
+                       data-appStyle="assets/css/app-dark.min.css" />
+                <label class="form-check-label" for="dark-mode-switch">Dark Mode</label>
+            </div>
+
+            <div class="mb-2">
+                <img src="assets/images/layouts/layout-3.jpg" class="img-fluid img-thumbnail" alt="">
+            </div>
+            <div class="form-check form-switch mb-5">
+                <input type="checkbox" class="form-check-input theme-choice" id="rtl-mode-switch" data-appStyle="assets/css/app-rtl.min.css" />
+                <label class="form-check-label" for="rtl-mode-switch">RTL Mode</label>
+            </div>
+            <div class="d-grid">
+                <a href="https://1.envato.market/grNDB" class="btn btn-primary mt-3" target="_blank"><i class="mdi mdi-cart me-1"></i> Purchase Now</a>
+            </div>
+        </div>
+
+    </div> <!-- end slimscroll-menu-->
+</div>
+<!-- /Right-bar -->
+
+<!-- Right bar overlay-->
+<div class="rightbar-overlay"></div>
+
+<!-- JAVASCRIPT -->
+<script src="assets/libs/jquery/jquery.min.js"></script>
+<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/libs/metismenu/metisMenu.min.js"></script>
+<script src="assets/libs/simplebar/simplebar.min.js"></script>
+<script src="assets/libs/node-waves/waves.min.js"></script>
+
+<!-- Required datatable js -->
+<script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+<!-- Plugin Js-->
+<script src="assets/libs/chartist/chartist.min.js"></script>
+<script src="assets/libs/chartist-plugin-tooltips/chartist-plugin-tooltip.min.js"></script>
+
+<script src="assets/js/app.js"></script>
+
+<script>
+    $(document).ready(()=>{
+        var table = $("#dashboard-table-insurance-profile").DataTable({
+            dom: 'tp',
+            fixedHeader: true,
+            pageLength: 4,
+            language: {
+                paginate: {
+                    previous: '‹',
+                    next:     '›'
+                },
+                aria: {
+                    paginate: {
+                        previous: 'Previous',
+                        next:     'Next'
+                    }
+                }
+            }
+        })
+
+        $(".filter .year").click(function (e) {
+            table.columns(2).search(`/${$(this).attr("id")}`).draw();
+        })
+
+        $(".filter .type").click(function (e) {
+            table.columns(6).search(`${$(this).attr("id")}`).draw();
+        })
+
+
+        $(".filter .month").click(function (e) {
+            console.log( table.columns(3))
+            table.columns(2)
+                .search(`/${$(this).attr("id")}/`)
+                .draw();
+        })
+
+        new Chartist.Pie(
+            "#animating-donut",
+            { series: [63, 15, 22], labels: ["Series 1"] },
+            {   donutWidth: 20, donut: !0, showLabel: !1, plugins: [Chartist.plugins.tooltip()] }
+        )
+
+
+        new Chartist.Line(
+            "#chart-with-area",
+            { labels: ["Jan","Feb","Mar","Apr","May","Jun"], series: [[350,400,600,220,350,400]] },
+            { low: 0, showArea: false,fullWidth:true,axisY: {
+                    labelInterpolationFnc: function(value) {
+                        return (value / 1) + '$';
+                    }
+                }, plugins: [Chartist.plugins.tooltip()] }
+        )
+
+
+
+        $('a[href$="#prev"]').click(()=>{
+            new Chartist.Line(
+                "#chart-with-area-prev",
+                { labels: ["Jan","Feb","Mar","Apr","May","Jun"], series: [[500,400,200,0,10,400]] },
+                { low: 0, showArea: false,fullWidth:true,axisY: {
+                        labelInterpolationFnc: function(value) {
+                            return (value / 1) + '$';
+                        }
+                    }, plugins: [Chartist.plugins.tooltip()] }
+            )
+        })
+    })
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Create Quote</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <link href="assets/libs/chartist/chartist.min.css" rel="stylesheet">
+    <!-- DataTables -->
+    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="assets/css/wizard.css">
+
+</head>
+
+<body data-sidebar="dark">
+
+<!-- Begin page -->
+<div id="layout-wrapper">
+
+
+    <header id="page-topbar">
+        <div class="navbar-header">
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+                <a href="index.html" class="logo logo-dark">
+                                <span class="logo-sm">
+                                    <img src="assets/images/theme/logo.png" alt="" height="22">
+                                </span>
+                    <span class="logo-lg">
+                                    <img src="assets/images/theme/logo.png" alt="" height="17">
+                                </span>
+                </a>
+
+                <a href="index.html" class="logo logo-light d-flex justify-content-center align-items-center">
+                                <span class="logo-sm">
+                                    <img src="assets/images/theme/logo.png" alt="" height="22">
+                                </span>
+                    <span class="logo-lg">
+                                    <img src="assets/images/theme/logo.png" alt="" height="30 ">
+                                </span>
+                    <h2 class="m-0 text-white ps-lg-3">Admin Panel</h2>
+                </a>
+            </div>
+
+            <div class="d-flex">
+                <!-- App Search-->
+                <form class="app-search d-none d-lg-block theme">
+                    <div class="position-relative">
+                        <span class="fa fa-search"></span>
+                        <input type="text" class="form-control" placeholder="Search...">
+                    </div>
+                </form>
+            </div>
+
+            <div class="d-flex">
+
+                <div class="dropdown d-inline-block">
+                    <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="mdi mdi-bell-ring-outline"></i>
+                        <span class="badge bg-danger rounded-pill">3</span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-notifications-dropdown">
+                        <div class="p-3">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h5 class="m-0 font-size-16"> Notifications (258) </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-simplebar style="max-height: 230px;">
+                            <a href="" class="text-reset notification-item">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar-xs">
+                                                    <span class="avatar-title bg-success rounded-circle font-size-16">
+                                                        <i class="mdi mdi-cart-outline"></i>
+                                                    </span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">Your order is placed</h6>
+                                        <div class="font-size-12 text-muted">
+                                            <p class="mb-1">Dummy text of the printing and typesetting industry.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="" class="text-reset notification-item">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar-xs">
+                                                    <span class="avatar-title bg-warning rounded-circle font-size-16">
+                                                        <i class="mdi mdi-message-text-outline"></i>
+                                                    </span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">New Message received</h6>
+                                        <div class="font-size-12 text-muted">
+                                            <p class="mb-1">You have 87 unread messages</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="" class="text-reset notification-item">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar-xs">
+                                                    <span class="avatar-title bg-info rounded-circle font-size-16">
+                                                        <i class="mdi mdi-glass-cocktail"></i>
+                                                    </span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">Your item is shipped</h6>
+                                        <div class="font-size-12 text-muted">
+                                            <p class="mb-1">It is a long established fact that a reader will</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="" class="text-reset notification-item">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar-xs">
+                                                    <span class="avatar-title bg-primary rounded-circle font-size-16">
+                                                        <i class="mdi mdi-cart-outline"></i>
+                                                    </span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">Your order is placed</h6>
+                                        <div class="font-size-12 text-muted">
+                                            <p class="mb-1">Dummy text of the printing and typesetting industry.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="" class="text-reset notification-item">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar-xs">
+                                                    <span class="avatar-title bg-danger rounded-circle font-size-16">
+                                                        <i class="mdi mdi-message-text-outline"></i>
+                                                    </span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">New Message received</h6>
+                                        <div class="font-size-12 text-muted">
+                                            <p class="mb-1">You have 87 unread messages</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="p-2 border-top">
+                            <div class="d-grid">
+                                <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
+                                    View all
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown d-inline-block">
+                    <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="rounded-circle header-profile-user" src="assets/images/users/user-4.jpg"
+                             alt="Header Avatar">
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <!-- item-->
+                        <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle font-size-17 align-middle me-1"></i> Profile</a>
+                        <a class="dropdown-item" href="#"><i class="mdi mdi-wallet font-size-17 align-middle me-1"></i> My Wallet</a>
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i class="mdi mdi-cog font-size-17 align-middle me-1"></i> Settings<span class="badge bg-success ms-auto">11</span></a>
+                        <a class="dropdown-item" href="#"><i class="mdi mdi-lock-open-outline font-size-17 align-middle me-1"></i> Lock screen</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-danger" href="#"><i class="bx bx-power-off font-size-17 align-middle me-1 text-danger"></i> Logout</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== Left Sidebar Start ========== -->
+    <div class="vertical-menu">
+
+        <div data-simplebar class="h-100">
+
+            <!--- Sidemenu -->
+            <div id="sidebar-menu">
+                <!-- Left Menu Start -->
+                <ul class="metismenu list-unstyled" id="side-menu">
+
+                    <li>
+                        <a href="index.html" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>User Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Insurance Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Inquiries Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Policy Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Content Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Email Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Setup</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>CRM</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Task Management</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Sidebar -->
+        </div>
+    </div>
+    <!-- Left Sidebar End -->
+
+
+
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="main-content">
+
+        <div class="page-content">
+            <div class="container-fluid">
+                <!-- start page title -->
+                <div class="page-title-box">
+                    <ol class="breadcrumb m-0">
+                        <li class="breadcrumb-item">Home</li>
+                        <li class="breadcrumb-item">User Management</li>
+                        <li class="breadcrumb-item">All Agents</li>
+                    </ol>
+                </div>
+                <!-- start page title -->
+                <div class="page-title-box py-1">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h1 class="page-title users text-black">All Agents</h1>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title -->
+
+                <div class="row justify-content-center">
+                    <div class="w-50">
+                        <div class="form">
+                            <div class="progress-main mb-2">
+                                <div class="progress">
+                                    <div class="progress-bar" id="progressBar" role="progressbar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div>
+                                    <div class="checkpoints">
+                                        <div class="d-flex flex-column align-items-center"><div class="checkpoint"></div><div class="title">Car Details</div></div>
+                                        <div class="d-flex flex-column align-items-center"><div class="checkpoint"></div><div class="title">Driving Details</div></div>
+                                        <div class="d-flex flex-column align-items-center"><div class="checkpoint"></div><div class="title">Quotation</div></div>
+                                        <div class="d-flex flex-column align-items-center"><div class="checkpoint"></div><div class="title">Submit</div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-container">
+                                <div class="question">
+                                    <h2>What is your <span class="text-primary-theme">car's brand?</span></h2>
+                                </div>
+                                <div class="select-box">
+                                    <select class="form-control" name="tag[]" data-live-search="true" id="choices-multiple-remove-button" placeholder="Select Tags" multiple>
+
+                                    </select>
+                                </div>
+                                <div class="options">
+                                    <div class="choices__list option-container" id="option-wrapper">
+                                    </div>
+                                </div>
+                                <div class="personal-form">
+                                    <div class="form-container">
+                                        <h3>Share your Personal Details</h3>
+                                        <div class="row">
+                                            <div class="col-12 mb-3">
+                                                <input class="form-control" type="text" placeholder="Full Name">
+                                            </div>
+                                            <div class="col-lg-6 col-sm-12 mb-3">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control docs-date" name="date" data-toggle="datepicker" placeholder="Date of Birth" autocomplete="off">
+                                                    <span class="input-group-text"><img width="20" src="../assets/img/quote/calendar-icon.png"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-sm-12 mb-3">
+                                                <input type="text" class="form-control " name="phone" placeholder="Mobile Number">
+                                            </div>
+                                            <div class="col-lg-6 col-sm-12 mb-3">
+                                                <input type="email" class="form-control " name="email" placeholder="Email Address">
+                                            </div>
+                                            <div class="gender col-lg-6 col-sm-12 mb-3 d-flex justify-content-around align-items-center">
+                                                <p class="m-0 p-0">Gender: </p>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="male" value="male">
+                                                    <label class="form-check-label" for="male">Male</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="female" value="female">
+                                                    <label class="form-check-label" for="female">Female</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-sm-12 mb-3">
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option selected>Nationality</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary px-xl-5 btn-theme btn-next">Next</button>
+                                    </div>
+                                </div>
+                                <div class="upload-doucments">
+                                    <div class="row">
+                                        <div class="col-xl-6">
+                                            <div class="form-input">
+                                                <fieldset class="float-label-field bg-white upload-file d-flex align-items-center justify-content-between">
+                                                    <span><label class="bg-white" for="driving-license">Driving Lisence</label></span>
+                                                    <i class="mdi mdi-attachment attachment-icon"></i>
+                                                    <input type="file" name="driving-license" id="driving-license" class="d-none bg-transparent"/>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <div class="form-input">
+                                                <fieldset class="float-label-field bg-white upload-file d-flex align-items-center justify-content-between">
+                                                    <span><label class="bg-white" for="driving-license">Driving Lisence</label></span>
+                                                    <i class="mdi mdi-attachment attachment-icon"></i>
+                                                    <input type="file" name="driving-license" id="upload-visa" class="d-none bg-transparent"/>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <div class="form-input">
+                                                <fieldset class="float-label-field bg-white upload-file d-flex align-items-center justify-content-between">
+                                                    <span><label class="bg-white" for="driving-license">Driving Lisence</label></span>
+                                                    <i class="mdi mdi-attachment attachment-icon"></i>
+                                                    <input type="file" name="driving-license" id="emarities-id" class="d-none bg-transparent"/>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <div class="form-input">
+                                                <fieldset class="float-label-field bg-white upload-file d-flex align-items-center justify-content-between">
+                                                    <span><label class="bg-white" for="driving-license">Driving Lisence</label></span>
+                                                    <i class="mdi mdi-attachment attachment-icon"></i>
+                                                    <input type="file" name="driving-license" id="upload-passport" class="d-none bg-transparent"/>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <div class="form-input">
+                                                <fieldset class="float-label-field bg-white upload-file d-flex align-items-center justify-content-between">
+                                                    <span><label class="bg-white" for="driving-license">Driving Lisence</label></span>
+                                                    <i class="mdi mdi-attachment attachment-icon"></i>
+                                                    <input type="file" name="driving-license" id="upload-policy" class="d-none bg-transparent"/>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <button class="btn my-3 btn-back">< Back</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
+
+
+            </div> <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+       
+
+    </div>
+    <!-- end main content-->
+
+</div>
+<!-- END layout-wrapper -->
+
+<!-- Right Sidebar -->
+<div class="right-bar">
+    <div data-simplebar class="h-100">
+        <div class="rightbar-title px-3 py-4">
+            <a href="javascript:void(0);" class="right-bar-toggle float-end">
+                <i class="mdi mdi-close noti-icon"></i>
+            </a>
+            <h5 class="m-0">Settings</h5>
+        </div>
+
+        <!-- Settings -->
+        <hr class="mt-0" />
+        <h6 class="text-center">Choose Layouts</h6>
+
+        <div class="p-4">
+            <div class="mb-2">
+                <img src="assets/images/layouts/layout-1.jpg" class="img-fluid img-thumbnail" alt="">
+            </div>
+            <div class="form-check form-switch mb-3">
+                <input type="checkbox" class="form-check-input theme-choice" id="light-mode-switch" checked />
+                <label class="form-check-label" for="light-mode-switch">Light Mode</label>
+            </div>
+
+            <div class="mb-2">
+                <img src="assets/images/layouts/layout-2.jpg" class="img-fluid img-thumbnail" alt="">
+            </div>
+            <div class="form-check form-switch mb-3">
+                <input type="checkbox" class="form-check-input theme-choice" id="dark-mode-switch" data-bsStyle="assets/css/bootstrap-dark.min.css"
+                       data-appStyle="assets/css/app-dark.min.css" />
+                <label class="form-check-label" for="dark-mode-switch">Dark Mode</label>
+            </div>
+
+            <div class="mb-2">
+                <img src="assets/images/layouts/layout-3.jpg" class="img-fluid img-thumbnail" alt="">
+            </div>
+            <div class="form-check form-switch mb-5">
+                <input type="checkbox" class="form-check-input theme-choice" id="rtl-mode-switch" data-appStyle="assets/css/app-rtl.min.css" />
+                <label class="form-check-label" for="rtl-mode-switch">RTL Mode</label>
+            </div>
+            <div class="d-grid">
+                <a href="https://1.envato.market/grNDB" class="btn btn-primary mt-3" target="_blank"><i class="mdi mdi-cart me-1"></i> Purchase Now</a>
+            </div>
+        </div>
+
+    </div> <!-- end slimscroll-menu-->
+</div>
+<!-- /Right-bar -->
+
+<!-- Right bar overlay-->
+<div class="rightbar-overlay"></div>
+
+<!-- JAVASCRIPT -->
+<script src="assets/libs/jquery/jquery.min.js"></script>
+<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/libs/metismenu/metisMenu.min.js"></script>
+<script src="assets/libs/simplebar/simplebar.min.js"></script>
+<script src="assets/libs/node-waves/waves.min.js"></script>
+
+<!-- Required datatable js -->
+<script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/choices.js"></script>
+
+<script>
+    var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
+        removeItemButton: true,
+        maxItemCount:5,
+        searchResultLimit:5,
+        renderChoiceLimit:5
+    });
+    var cars = [
+        {id: "option01", title: "BMW"},
+        {id: "option02", title: "APPOLO"},
+        {id: "option03", title: "ALPHA ROMEO"},
+        {id: "option04", title: "APPOLO"},
+        {id: "option05", title: "ALPHA ROMEO"},
+        {id: "option06", title: "BMW"},
+        {id: "option07", title: "APPOLO"},
+        {id: "option08", title: "ALPHA ROMEO"},
+        {id: "option09", title: "BMW"},
+        {id: "option010", title: "APPOLO"}
+    ]
+    var models = [
+        {id:"model01",title:"Stelvio"},
+        {id:"model02",title:"Giulietta"},
+        {id:"model03",title:"159"},
+        {id:"model04",title:"Brera"},
+        {id:"model05",title:"CLK"},
+        {id:"model06",title:"i10"},
+        {id:"model07",title:"192"},
+        {id:"model08",title:"testmodel"},
+        {id:"model09",title:"Stelvio"},
+        {id:"model10",title:"Stelvio"},
+        {id:"model11",title:"Stelvio"},
+        {id:"model12",title:"Stelvio"},
+
+
+    ]
+    var spec = [
+        {id:"spec01",title:"318 Convertible"},
+        {id:"spec02",title:"318 Convertible"},
+        {id:"spec03",title:"318 Convertible"},
+        {id:"spec04",title:"318 Convertible"},
+        {id:"spec05",title:"318 Convertible"},
+        {id:"spec06",title:"318 Convertible"},
+        {id:"spec07",title:"318 Convertible"},
+        {id:"spec08",title:"318 Convertible"},
+        {id:"spec09",title:"318 Convertible"},
+        {id:"spec10",title:"318 Convertible"},
+        {id:"spec11",title:"318 Convertible"},
+
+    ]
+    var year = [
+        {id:"1999",title:"1999"},
+        {id:"2000",title:"2000"},
+        {id:"2001",title:"2001"},
+        {id:"2002",title:"2002"},
+        {id:"2003",title:"2003"},
+        {id:"2004",title:"2004"},
+        {id:"2005",title:"2005"},
+    ]
+    var city = [
+        {id:"city01",title:"Dubai"},
+        {id:"city02",title:"Abu Dhabi"},
+        {id:"city03",title:"Sharjah"},
+        {id:"city04",title:"Fujairah"},
+        {id:"city05",title:"Dubai"},
+        {id:"city06",title:"Dubai"},
+        {id:"city07",title:"Dubai"},
+    ]
+    var minPrice = 0, maxPrice = 10000
+    var experience = [
+        {id:"exp01",title:"5+ years"},
+        {id:"exp02",title:"3-4 years"},
+        {id:"exp03",title:"2-3 years"},
+        {id:"exp04",title:"1-2 years"},
+        {id:"exp05",title:"10-11 months"},
+        {id:"exp06",title:"6-12 Months"},
+        {id:"exp07",title:"1-6 Months"}
+    ]
+    var cert = [
+        {id:"cert01",title:"I Have No Certificate"},
+        {id:"cert02",title:"Yes - 1 Year Proof"},
+        {id:"cert03",title:"Yes - 2 Year Proof"},
+        {id:"cert04",title:"Yes - 3 Year Proof"},
+        {id:"cert05",title:"Yes - 4 Year Proof"},
+        {id:"cert06",title:"Yes - 5 Year Proof"},
+        {id:"cert07",title:"Yes - 6 Year Proof"},
+        {id:"cert08",title:"Yes - 6 Year Proof"},
+    ]
+    var cmpSection = [
+        {id:"cmp01",title:"Comprehensive Insurance"},
+        {id:"cmp02",title:"Private Vehicle Comprehensive"},
+        {id:"cmp03",title:"Jubilee Private Car Comprehensive"},
+        {id:"cmp04",title:"Comprehensive Insurance"},
+    ]
+    var month= [
+        {id:"month01",title:"January"},
+        {id:"month02",title:"February"},
+        {id:"month03",title:"March"},
+        {id:"month04",title:"April"},
+        {id:"month05",title:"May"},
+        {id:"month06",title:"June"},
+        {id:"month07",title:"July"},
+        {id:"month08",title:"August"},
+        {id:"month09",title:"September"},
+        {id:"month10",title:"October"},
+        {id:"month11",title:"November"},
+        {id:"month12",title:"December"},
+    ]
+</script>
+<script src="assets/js/wizard.js"></script>
+
+</body>
+
+</html>

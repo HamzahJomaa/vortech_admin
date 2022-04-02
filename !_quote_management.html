@@ -1,0 +1,1009 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Quote Management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <link href="assets/libs/chartist/chartist.min.css" rel="stylesheet">
+    <!-- DataTables -->
+    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+    <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body data-sidebar="dark">
+
+<!-- Begin page -->
+<div id="layout-wrapper">
+
+
+    <header id="page-topbar">
+        <div class="navbar-header">
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+                <a href="index.html" class="logo logo-dark">
+                                <span class="logo-sm">
+                                    <img src="assets/images/theme/logo.png" alt="" height="22">
+                                </span>
+                    <span class="logo-lg">
+                                    <img src="assets/images/theme/logo.png" alt="" height="17">
+                                </span>
+                </a>
+
+                <a href="index.html" class="logo logo-light d-flex justify-content-center align-items-center">
+                                <span class="logo-sm">
+                                    <img src="assets/images/theme/logo.png" alt="" height="22">
+                                </span>
+                    <span class="logo-lg">
+                                    <img src="assets/images/theme/logo.png" alt="" height="30 ">
+                                </span>
+                    <h2 class="m-0 text-white ps-lg-3">Admin Panel</h2>
+                </a>
+            </div>
+
+            <div class="d-flex">
+                <!-- App Search-->
+                <form class="app-search d-none d-lg-block theme">
+                    <div class="position-relative">
+                        <span class="fa fa-search"></span>
+                        <input type="text" class="form-control" placeholder="Search...">
+                    </div>
+                </form>
+            </div>
+
+            <div class="d-flex">
+
+                <div class="dropdown d-inline-block">
+                    <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="mdi mdi-bell-ring-outline"></i>
+                        <span class="badge bg-danger rounded-pill">3</span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-notifications-dropdown">
+                        <div class="p-3">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h5 class="m-0 font-size-16"> Notifications (258) </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-simplebar style="max-height: 230px;">
+                            <a href="" class="text-reset notification-item">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar-xs">
+                                                    <span class="avatar-title bg-success rounded-circle font-size-16">
+                                                        <i class="mdi mdi-cart-outline"></i>
+                                                    </span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">Your order is placed</h6>
+                                        <div class="font-size-12 text-muted">
+                                            <p class="mb-1">Dummy text of the printing and typesetting industry.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="" class="text-reset notification-item">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar-xs">
+                                                    <span class="avatar-title bg-warning rounded-circle font-size-16">
+                                                        <i class="mdi mdi-message-text-outline"></i>
+                                                    </span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">New Message received</h6>
+                                        <div class="font-size-12 text-muted">
+                                            <p class="mb-1">You have 87 unread messages</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="" class="text-reset notification-item">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar-xs">
+                                                    <span class="avatar-title bg-info rounded-circle font-size-16">
+                                                        <i class="mdi mdi-glass-cocktail"></i>
+                                                    </span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">Your item is shipped</h6>
+                                        <div class="font-size-12 text-muted">
+                                            <p class="mb-1">It is a long established fact that a reader will</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="" class="text-reset notification-item">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar-xs">
+                                                    <span class="avatar-title bg-primary rounded-circle font-size-16">
+                                                        <i class="mdi mdi-cart-outline"></i>
+                                                    </span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">Your order is placed</h6>
+                                        <div class="font-size-12 text-muted">
+                                            <p class="mb-1">Dummy text of the printing and typesetting industry.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="" class="text-reset notification-item">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar-xs">
+                                                    <span class="avatar-title bg-danger rounded-circle font-size-16">
+                                                        <i class="mdi mdi-message-text-outline"></i>
+                                                    </span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">New Message received</h6>
+                                        <div class="font-size-12 text-muted">
+                                            <p class="mb-1">You have 87 unread messages</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="p-2 border-top">
+                            <div class="d-grid">
+                                <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
+                                    View all
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown d-inline-block">
+                    <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="rounded-circle header-profile-user" src="assets/images/users/user-4.jpg"
+                             alt="Header Avatar">
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <!-- item-->
+                        <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle font-size-17 align-middle me-1"></i> Profile</a>
+                        <a class="dropdown-item" href="#"><i class="mdi mdi-wallet font-size-17 align-middle me-1"></i> My Wallet</a>
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i class="mdi mdi-cog font-size-17 align-middle me-1"></i> Settings<span class="badge bg-success ms-auto">11</span></a>
+                        <a class="dropdown-item" href="#"><i class="mdi mdi-lock-open-outline font-size-17 align-middle me-1"></i> Lock screen</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-danger" href="#"><i class="bx bx-power-off font-size-17 align-middle me-1 text-danger"></i> Logout</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== Left Sidebar Start ========== -->
+    <div class="vertical-menu">
+
+        <div data-simplebar class="h-100">
+
+            <!--- Sidemenu -->
+            <div id="sidebar-menu">
+                <!-- Left Menu Start -->
+                <ul class="metismenu list-unstyled" id="side-menu">
+
+                    <li>
+                        <a href="index.html" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>User Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Insurance Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Inquiries Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Policy Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Content Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Email Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Setup</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>CRM</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Task Management</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Sidebar -->
+        </div>
+    </div>
+    <!-- Left Sidebar End -->
+
+
+
+
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="main-content">
+
+        <div class="page-content company-profile">
+            <div class="container-fluid">
+                <!-- start page title -->
+                <div class="page-title-box">
+                    <ol class="breadcrumb m-0">
+                        <li class="breadcrumb-item">Home</li>
+                        <li class="breadcrumb-item">Quote Management</li>
+                        <li class="breadcrumb-item">Quotes</li>
+                    </ol>
+                </div>
+                <!-- start page title -->
+                <div class="page-title-box">
+                    <div class="row align-items-center">
+                        <div class="col-md-2">
+                            <h1 class="page-title users text-black">Quotes</h1>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="float-start d-none d-md-block">
+                                <a class="btn btn-primary dropdown-toggle px-5" >
+                                    <i class="mdi mdi-pencil me-2"></i> Add New
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="float-end d-none d-md-block">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <button type="button" class="btn btn-secondary waves-effect" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-content='<form><input type="text"/></form>'>
+                                            Popover on top
+                                        </button>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-control table-search">
+                                            <input class="border-0 outline-0" type="text" id="searchUsers">
+                                            <span> <i class="fa fas fa-search"></i> </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title -->
+
+                <div class="row">
+<!--                    <div class="title">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col-lg-6">-->
+<!--                                <h3 class="text-black">Repairs supplied by agency</h3>-->
+<!--                            </div>-->
+<!--                            <div class="col-lg-6">-->
+<!--                                <div class="float-end d-none d-md-block">-->
+<!--                                    <div class="btn-group me-1 mt-2 filter">-->
+<!--                                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--                                            Filter by year-->
+<!--                                            <i class="mdi mdi-chevron-down"></i>-->
+<!--                                        </button>-->
+<!--                                        <div class="dropdown-menu">-->
+<!--                                            <button class="dropdown-item year" id="2010">2010</button>-->
+<!--                                            <button class="dropdown-item year" id="2011">2011</button>-->
+<!--                                            <button class="dropdown-item year" id="2012">2012</button>-->
+<!--                                            <button class="dropdown-item year" id="2013">2013</button>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="btn-group me-1 mt-2 filter">-->
+<!--                                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--                                            Month-->
+<!--                                            <i class="mdi mdi-chevron-down"></i>-->
+<!--                                        </button>-->
+<!--                                        <div class="dropdown-menu">-->
+<!--                                            <button class="dropdown-item month" id="01">Jan</button>-->
+<!--                                            <button class="dropdown-item month" id="02">Feb</button>-->
+<!--                                            <button class="dropdown-item month" id="03">March</button>-->
+<!--                                            <button class="dropdown-item month" id="04">April</button>-->
+<!--                                            <button class="dropdown-item month" id="05">May</button>-->
+<!--                                            <button class="dropdown-item month" id="06">June</button>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="btn-group me-1 mt-2 filter">-->
+<!--                                        <button class="btn btn-secondary btn-sm dropdown-toggle filter" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--                                            Type-->
+<!--                                            <i class="mdi mdi-chevron-down"></i>-->
+<!--                                        </button>-->
+<!--                                        <div class="dropdown-menu type">-->
+<!--                                            <button class="dropdown-item type" id="type01">Type 1</button>-->
+<!--                                            <button class="dropdown-item type" id="type02">Type 2</button>-->
+<!--                                            <button class="dropdown-item type" id="type03">Type 3</button>-->
+<!--                                            <button class="dropdown-item type" id="type04">Type 4</button>-->
+<!--                                            <button class="dropdown-item type" id="type05">Type 5</button>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                    <div class="w-100">
+                        <div class="listing">
+                            <table id="dashboard-table-quote" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Vehicles Details</th>
+                                    <th>Driver Details</th>
+                                    <th>Quotes Details</th>
+                                    <th>Actions</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>ib-1340</td>
+                                        <td>
+                                            <div class="details">
+                                                <div class="detail-item d-flex justify-content-between"><p class="m-0">Category</p><p class="m-0">Saloon</p></div>
+                                                <div class="detail-item d-flex justify-content-between"><p class="m-0">Make</p><p class="m-0">audi</p></div>
+                                                <div class="detail-item d-flex justify-content-between"><p class="m-0">Model</p><p class="m-0">audi a1</p></div>
+                                                <div class="detail-item d-flex justify-content-between"><p class="m-0">Manufacture Year</p><p class="m-0">2020</p></div>
+                                                <div class="detail-item d-flex justify-content-between"><p class="m-0">First Registration Date</p><p class="m-0">2/11/2021</p></div>
+                                                <div class="detail-item d-flex justify-content-between"><p class="m-0">Emirate Of Registration</p><p class="m-0">Abu Dhabi</p></div>
+                                                <div class="detail-item d-flex justify-content-between"><p class="m-0">Car Market value</p><p class="m-0">102646.00 AED</p></div>
+                                                <div class="detail-item d-flex justify-content-between"><p class="m-0">Claims Certificate</p><p class="m-0">Claims Certificate	</p></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="details">
+                                                <div class="detail-item d-flex justify-content-between"><p class="m-0">Name</p><p class="m-0">Hooria Ishtiaq</p></div>
+                                                <div class="detail-item d-flex justify-content-between"><p class="m-0">Phone</p><p class="m-0">0509651605</p></div>
+                                                <div class="detail-item d-flex justify-content-between"><p class="m-0">Email Address</p><p class="m-0">hooria.hic@gmail.com</p></div>
+                                                <div class="detail-item d-flex justify-content-between"><p class="m-0">Date of Birth</p><p class="m-0">01/28/1997</p></div>
+                                                <div class="detail-item d-flex justify-content-between"><p class="m-0">Gender</p><p class="m-0">Male</p></div>
+                                                <div class="detail-item d-flex justify-content-between"><p class="m-0">Nationality</p><p class="m-0">Pakistan</p></div>
+                                                <div class="detail-item d-flex justify-content-between"><p class="m-0">Driving License Country</p><p class="m-0">Pakistan</p></div>
+                                                <div class="detail-item d-flex justify-content-between"><p class="m-0">Driving License Total</p><p class="m-0">$200</p></div>
+                                                <div class="detail-item d-flex justify-content-between"><p class="m-0">Driving License UAE</p><p class="m-0">3 - 4 Years</p></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="details">
+                                                <div class="detail-item d-flex justify-content-between"><p class="m-0">Date</p><p class="m-0">2022-02-02</p></div>
+                                                <div class="detail-item d-flex justify-content-between"><p class="m-0">Company</p><p class="m-0">Somewhere</p></div>
+                                                <div class="detail-item d-flex justify-content-between"><p class="m-0">Type</p><p class="m-0">Lorem</p></div>
+                                                <div class="detail-item d-flex justify-content-between"><p class="m-0">Addons</p><p class="m-0">Not Available</p></div>
+                                                <div class="detail-item d-flex justify-content-between"><p class="m-0">Additionals</p><p class="m-0">Not Available</p></div>
+                                                <div class="detail-item d-flex justify-content-between"><p class="m-0">Premium</p><p class="m-0">AED 0.00</p></div>
+                                                <div class="detail-item d-flex justify-content-between"><p class="m-0">Driver age bend</p><p class="m-0">AED 0.00</p></div>
+                                                <div class="detail-item d-flex justify-content-between"><p class="m-0">Discount</p><p class="m-0">AED 0.00</p></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="actions">
+                                                <div class="row">
+                                                    <div class="col-lg-12 d-flex justify-content-between">
+                                                        <button class="btn icon-theme-box orange"><i class="mdi mdi-download"></i></button>
+
+                                                        <button class="btn icon-theme-box bg-theme-primary-blue" data-quote-id="ib-1340" data-bs-toggle="modal" data-bs-target="#convertModal"><i class="mdi mdi-eye"></i></button>
+
+                                                        <button class="btn icon-theme-box green call"><i class="mdi mdi-pencil"></i></button>
+                                                        <button class="btn icon-theme-box bg-blue-grey waves-effect waves-light" data-quote-id="ib-1340" id="custom-html-alert" ><i class="pt-2 dripicons- dripicons-loading"></i></button>
+                                                        <button class="btn icon-theme-box bg-danger waves-effect waves-light" data-quote-id="ib-1340" id="sa-warning"><i class="mdi mdi-delete"></i></button>
+                                                    </div>
+                                                    <div class="col-lg-12 d-flex mt-1">
+                                                        <button class="btn icon-theme-box text-primary-theme w-100 outline font-size-16" data-quote-id="ib-1340" data-bs-toggle="modal" data-bs-target="#callModal" ><i class="mdi mdi-phone font-size-22 me-2"></i>Schedule Call</button>
+                                                    </div>
+                                                    <div class="col-lg-12 d-flex mt-1">
+                                                        <button class="btn icon-theme-box text-success w-100 outline font-size-16" data-quote-id="ib-1340" data-bs-toggle="modal" data-bs-target="#emailModal"><i class="mdi mdi-email font-size-22 me-2"></i> Send Email</button>
+                                                    </div>
+                                                    <div class="col-lg-12 d-flex mt-1">
+                                                        <button class="btn icon-theme-box text-warning w-100 outline font-size-16" data-quote-id="ib-1340" data-bs-toggle="modal" data-bs-target="#reminderModal"><i class="mdi mdi-timer-sand font-size-22 me-2"></i> Set Reminder </button>
+                                                    </div>
+                                                    <div class="col-lg-12 d-flex mt-1">
+                                                        <button class="btn icon-theme-box bg-theme-primary-blue w-100 font-size-16" data-quote-id="ib-1340" data-bs-toggle="modal" data-bs-target="#noteModal"><i class="mdi mdi-plus font-size-22 me-2"></i> Add Note </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade bs-example-modal-lg" id="convertModal" tabindex="-1" role="dialog"
+                     aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h2 class="modal-title text-center text-black mb-lg-4">Convert the quote to policy</h2>
+                                <div class="modal-form">
+                                    <div class="row">
+                                        <div class="col-xl-6">
+                                            <div class="form-input">
+                                                <fieldset class='float-label-field'>
+                                                    <label class="bg-white" for="name" >Insurance Company Name</label>
+                                                    <input class="bg-transparent" id="name" type='text'>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <div class="form-input">
+                                                <fieldset class="float-label-field">
+                                                    <select
+                                                            class="form-select bg-transparent"
+                                                            id="inputGroupSelect"
+                                                            name="yearsNumber">
+                                                        <option selected>1-3 Years</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <div class="form-input">
+                                                <fieldset class='float-label-field'>
+                                                    <label class="bg-white" for="policy_no" >Policy No.</label>
+                                                    <input class="bg-transparent" id="policy_no" type='text'>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <div class="form-input">
+                                                <fieldset class='float-label-field'>
+                                                    <label class="bg-white" for="policy_issue" >Policy Issue</label>
+                                                    <input class="bg-transparent" id="policy_issue" type='text'>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <div class="form-input">
+                                                <fieldset class='float-label-field'>
+                                                    <label class="bg-white" for="policy_exp" >Policy Expiry</label>
+                                                    <input class="bg-transparent" id="policy_exp" type='text'>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <div class="form-input">
+                                                <fieldset class="float-label-field bg-white upload-file d-flex align-items-center justify-content-between">
+                                                    <span><label class="bg-white" for="driving-license">Driving Lisence</label></span>
+                                                    <i class="mdi mdi-attachment attachment-icon"></i>
+                                                    <input type="file" name="driving-license" id="driving-license" class="d-none bg-transparent"/>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <div class="form-input">
+                                                <fieldset class="float-label-field">
+                                                    <label class="bg-white" for="paid">Customer Paid Amount</label>
+                                                    <input
+                                                            type="number"
+                                                            id="paid"
+                                                            class="form-control bg-transparent"
+                                                            autocomplete="false"
+                                                            name="valuePolicy"
+                                                            min="1"
+                                                    />
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <div class="form-input">
+                                                <fieldset class="float-label-field">
+                                                    <label class="bg-white" for="total">Policy Total Amount</label>
+                                                    <input
+                                                            type="number"
+                                                            id="total"
+                                                            class="form-control bg-transparent"
+                                                            autocomplete="false"
+                                                            name="valuePolicy"
+                                                            min="1"
+                                                    />
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn bg-theme-primary-blue text-white">Convert</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+                <!-- /.modal -->
+
+                <div class="modal fade bs-example-modal-lg" id="callModal" tabindex="-1" role="dialog"
+                     aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h2 class="modal-title text-center text-black mb-lg-4">Schedule a Call</h2>
+                                <div class="modal-form">
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <div class="form-input">
+                                                <fieldset class='float-label-field'>
+                                                    <label class="bg-white" for="title" >Title</label>
+                                                    <input class="bg-transparent" id="title" type='text'>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-6">
+                                            <div class="form-input">
+                                                <fieldset class="float-label-field">
+                                                    <label class="bg-white" for="time">Time</label>
+                                                    <input class="form-control bg-transparent" type="time" value="13:45:00" id="time">
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <div class="form-input">
+                                                <fieldset class="float-label-field">
+                                                    <label class="bg-white" for="date">Date of Birth</label>
+                                                    <input class="form-control bg-transparent" type="date" value="2020-08-04" id="date">
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <div class="form-input">
+                                                <fieldset class="float-label-field">
+                                                    <select
+                                                            class="form-select bg-transparent"
+                                                            id="member"
+                                                            name="yearsNumber">
+                                                        <option selected>1-3 Years</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <div class="form-input">
+                                                <fieldset class='float-label-field'>
+                                                    <label class="bg-white" for="textarea" >Title</label>
+                                                    <textarea required="" id="textarea d-none" class="form-control" rows="5" ></textarea>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn bg-theme-primary-blue text-white">Convert</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+                <!-- /.modal -->
+
+                <div class="modal fade bs-example-modal-lg" id="emailModal" tabindex="-1" role="dialog"
+                     aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h2 class="modal-title text-center text-black mb-lg-4">Schedule a Call</h2>
+                                <div class="modal-form">
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <div class="form-input">
+                                                <fieldset class='float-label-field'>
+                                                    <label class="bg-white" for="title" >Title</label>
+                                                    <input class="bg-transparent" id="title" type='text'>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-6">
+                                            <div class="form-input">
+                                                <fieldset class='float-label-field'>
+                                                    <label class="bg-white" for="sender" >Sender</label>
+                                                    <input class="bg-transparent" id="sender" type='text'>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <div class="form-input">
+                                                <fieldset class='float-label-field'>
+                                                    <label class="bg-white" for="subject" >Subject</label>
+                                                    <input class="bg-transparent" id="subject" type='text'>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <div class="form-input">
+                                                <fieldset class="float-label-field">
+                                                    <select
+                                                            class="form-select bg-transparent"
+                                                            id="member"
+                                                            name="yearsNumber">
+                                                        <option selected>Category</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <div class="form-input">
+                                                <fieldset class='float-label-field'>
+                                                    <label class="bg-white" for="member_add" >Add Member</label>
+                                                    <input class="bg-transparent" id="member_add" type='text'>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <div class="form-input">
+                                                <fieldset class='float-label-field'>
+                                                    <label class="bg-white" for="desc" >Description</label>
+                                                    <textarea required="" id="desc" class="form-control" rows="5" ></textarea>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn bg-theme-primary-blue text-white">Convert</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+                <!-- /.modal -->
+
+                <div class="modal fade bs-example-modal-lg" id="reminderModal" tabindex="-1" role="dialog"
+                     aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h2 class="modal-title text-center text-black mb-lg-4">Schedule a Call</h2>
+                                <div class="modal-form">
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <div class="form-input">
+                                                <fieldset class='float-label-field'>
+                                                    <label class="bg-white" for="reminder_title" >Title</label>
+                                                    <input class="bg-transparent" id="reminder_title" type='text'>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-6">
+                                            <div class="form-input">
+                                                <fieldset class="float-label-field">
+                                                    <label class="bg-white" for="time">Time</label>
+                                                    <input class="form-control bg-transparent" type="time" id="reminder_time">
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <div class="form-input">
+                                                <fieldset class="float-label-field">
+                                                    <label class="bg-white" for="date">Date</label>
+                                                    <input class="form-control bg-transparent" type="date" id="reminder_date">
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <div class="form-input">
+                                                <fieldset class='float-label-field'>
+                                                    <label class="bg-white" for="reminder_area" >Title</label>
+                                                    <textarea required="" id="reminder_area" class="form-control" rows="5" ></textarea>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn bg-theme-primary-blue text-white">Convert</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+                <!-- /.modal -->
+
+                <div class="modal fade bs-example-modal-lg" id="noteModal" tabindex="-1" role="dialog"
+                     aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h2 class="modal-title text-center text-black mb-lg-4">Schedule a Call</h2>
+                                <div class="modal-form">
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <div class="form-input">
+                                                <fieldset class='float-label-field'>
+                                                    <label class="bg-white" for="note_title" >Title</label>
+                                                    <input class="bg-transparent" id="note_title" type='text'>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <div class="form-input">
+                                                <fieldset class='float-label-field'>
+                                                    <label class="bg-white" for="note_area" >Title</label>
+                                                    <textarea required="" id="note_area" class="form-control" rows="5" ></textarea>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn bg-theme-primary-blue text-white">Convert</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+                <!-- /.modal -->
+
+
+            </div> <!-- container-fluid -->
+        </div>
+
+
+    </div>
+    <!-- end main content-->
+
+</div>
+<!-- END layout-wrapper -->
+
+<!-- Right Sidebar -->
+<div class="right-bar">
+    <div data-simplebar class="h-100">
+        <div class="rightbar-title px-3 py-4">
+            <a href="javascript:void(0);" class="right-bar-toggle float-end">
+                <i class="mdi mdi-close noti-icon"></i>
+            </a>
+            <h5 class="m-0">Settings</h5>
+        </div>
+
+        <!-- Settings -->
+        <hr class="mt-0" />
+        <h6 class="text-center">Choose Layouts</h6>
+
+        <div class="p-4">
+            <div class="mb-2">
+                <img src="assets/images/layouts/layout-1.jpg" class="img-fluid img-thumbnail" alt="">
+            </div>
+            <div class="form-check form-switch mb-3">
+                <input type="checkbox" class="form-check-input theme-choice" id="light-mode-switch" checked />
+                <label class="form-check-label" for="light-mode-switch">Light Mode</label>
+            </div>
+
+            <div class="mb-2">
+                <img src="assets/images/layouts/layout-2.jpg" class="img-fluid img-thumbnail" alt="">
+            </div>
+            <div class="form-check form-switch mb-3">
+                <input type="checkbox" class="form-check-input theme-choice" id="dark-mode-switch" data-bsStyle="assets/css/bootstrap-dark.min.css"
+                       data-appStyle="assets/css/app-dark.min.css" />
+                <label class="form-check-label" for="dark-mode-switch">Dark Mode</label>
+            </div>
+
+            <div class="mb-2">
+                <img src="assets/images/layouts/layout-3.jpg" class="img-fluid img-thumbnail" alt="">
+            </div>
+            <div class="form-check form-switch mb-5">
+                <input type="checkbox" class="form-check-input theme-choice" id="rtl-mode-switch" data-appStyle="assets/css/app-rtl.min.css" />
+                <label class="form-check-label" for="rtl-mode-switch">RTL Mode</label>
+            </div>
+            <div class="d-grid">
+                <a href="https://1.envato.market/grNDB" class="btn btn-primary mt-3" target="_blank"><i class="mdi mdi-cart me-1"></i> Purchase Now</a>
+            </div>
+        </div>
+
+    </div> <!-- end slimscroll-menu-->
+</div>
+<!-- /Right-bar -->
+
+<!-- Right bar overlay-->
+<div class="rightbar-overlay"></div>
+
+<!-- JAVASCRIPT -->
+<script src="assets/libs/jquery/jquery.min.js"></script>
+<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/libs/metismenu/metisMenu.min.js"></script>
+<script src="assets/libs/simplebar/simplebar.min.js"></script>
+<script src="assets/libs/node-waves/waves.min.js"></script>
+
+<!-- Required datatable js -->
+<script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+<!-- Plugin Js-->
+<script src="assets/libs/chartist/chartist.min.js"></script>
+<script src="assets/libs/chartist-plugin-tooltips/chartist-plugin-tooltip.min.js"></script>
+
+<script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+
+<script src="assets/js/app.js"></script>
+
+<script>
+    $(document).ready(()=>{
+        $("#dashboard-table-quote").DataTable({
+            "columns": [
+                null,
+                null,
+                null,
+                null,
+                { "width": "15%" },
+            ]
+        })
+
+        $('input,textarea').focus(function(event) {
+            $(this).closest('.float-label-field').addClass('float').addClass('focus');
+        })
+
+        $('input,textarea').blur(function() {
+            $(this).closest('.float-label-field').removeClass('focus');
+            if (!$(this).val()) {
+                $(this).closest('.float-label-field').removeClass('float');
+            }
+        });
+
+
+        $("[data-quote-id]").click(function () {
+            let quote_id = $(this).data('quote-id');
+            console.log(quote_id)
+        })
+
+        $("#sa-warning").click(function () {
+            let quote = $(this).data("quote-id")
+            Swal.fire({
+                title: "Are you sure?",
+                text: "Are you sure you want to delete this quote? This process cannot be undone.",
+                showCancelButton: !0,
+                confirmButtonColor: "#FF0000",
+                cancelButtonColor: "#C4C4C4",
+                confirmButtonText: "Delete",
+            }).then(function (t) {
+                t.value &&
+                Swal.fire("Deleted!", "Your file has been deleted.", "success");
+            });
+        })
+
+        $("#custom-html-alert").click(function () {
+            let quote = $(this).data("quote-id")
+
+            Swal.fire({
+                title: "Set to Pending",
+                html: `<p>Do you want to set this quote status to pending? you can change the action anytime</p><input class="form-check form-switch" type="checkbox" id="switch2" switch="default" checked=""><label class="form-label" for="switch2" data-on-label="" data-off-label=""></label>`,
+                showCloseButton: !0,
+                showCancelButton: !0,
+                confirmButtonColor: "#008AEE",
+                cancelButtonColor: "#C4C4C4",
+                confirmButtonText: "Done"
+            }).then(function (t) {
+                t.value &&
+                Swal.fire("Updated!", "Your Quote has been set to pending", "success");
+            });
+        })
+
+    })
+</script>
+
+</body>
+
+</html>

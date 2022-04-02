@@ -1,0 +1,1028 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Dashboard Report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <link href="assets/libs/chartist/chartist.min.css" rel="stylesheet">
+    <!-- DataTables -->
+    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body data-sidebar="dark">
+
+<!-- Begin page -->
+<div id="layout-wrapper">
+
+
+    <header id="page-topbar">
+        <div class="navbar-header">
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+                <a href="index.html" class="logo logo-dark">
+                                <span class="logo-sm">
+                                    <img src="assets/images/theme/logo.png" alt="" height="22">
+                                </span>
+                    <span class="logo-lg">
+                                    <img src="assets/images/theme/logo.png" alt="" height="17">
+                                </span>
+                </a>
+
+                <a href="index.html" class="logo logo-light d-flex justify-content-center align-items-center">
+                                <span class="logo-sm">
+                                    <img src="assets/images/theme/logo.png" alt="" height="22">
+                                </span>
+                    <span class="logo-lg">
+                                    <img src="assets/images/theme/logo.png" alt="" height="30 ">
+                                </span>
+                    <h2 class="m-0 text-white ps-lg-3">Admin Panel</h2>
+                </a>
+            </div>
+
+            <div class="d-flex">
+                <!-- App Search-->
+                <form class="app-search d-none d-lg-block theme">
+                    <div class="position-relative">
+                        <span class="fa fa-search"></span>
+                        <input type="text" class="form-control" placeholder="Search...">
+                    </div>
+                </form>
+            </div>
+
+            <div class="d-flex">
+
+                <div class="dropdown d-inline-block">
+                    <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="mdi mdi-bell-ring-outline"></i>
+                        <span class="badge bg-danger rounded-pill">3</span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-notifications-dropdown">
+                        <div class="p-3">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h5 class="m-0 font-size-16"> Notifications (258) </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-simplebar style="max-height: 230px;">
+                            <a href="" class="text-reset notification-item">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar-xs">
+                                                    <span class="avatar-title bg-success rounded-circle font-size-16">
+                                                        <i class="mdi mdi-cart-outline"></i>
+                                                    </span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">Your order is placed</h6>
+                                        <div class="font-size-12 text-muted">
+                                            <p class="mb-1">Dummy text of the printing and typesetting industry.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="" class="text-reset notification-item">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar-xs">
+                                                    <span class="avatar-title bg-warning rounded-circle font-size-16">
+                                                        <i class="mdi mdi-message-text-outline"></i>
+                                                    </span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">New Message received</h6>
+                                        <div class="font-size-12 text-muted">
+                                            <p class="mb-1">You have 87 unread messages</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="" class="text-reset notification-item">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar-xs">
+                                                    <span class="avatar-title bg-info rounded-circle font-size-16">
+                                                        <i class="mdi mdi-glass-cocktail"></i>
+                                                    </span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">Your item is shipped</h6>
+                                        <div class="font-size-12 text-muted">
+                                            <p class="mb-1">It is a long established fact that a reader will</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="" class="text-reset notification-item">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar-xs">
+                                                    <span class="avatar-title bg-primary rounded-circle font-size-16">
+                                                        <i class="mdi mdi-cart-outline"></i>
+                                                    </span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">Your order is placed</h6>
+                                        <div class="font-size-12 text-muted">
+                                            <p class="mb-1">Dummy text of the printing and typesetting industry.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="" class="text-reset notification-item">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar-xs">
+                                                    <span class="avatar-title bg-danger rounded-circle font-size-16">
+                                                        <i class="mdi mdi-message-text-outline"></i>
+                                                    </span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">New Message received</h6>
+                                        <div class="font-size-12 text-muted">
+                                            <p class="mb-1">You have 87 unread messages</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="p-2 border-top">
+                            <div class="d-grid">
+                                <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
+                                    View all
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown d-inline-block">
+                    <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="rounded-circle header-profile-user" src="assets/images/users/user-4.jpg"
+                             alt="Header Avatar">
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <!-- item-->
+                        <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle font-size-17 align-middle me-1"></i> Profile</a>
+                        <a class="dropdown-item" href="#"><i class="mdi mdi-wallet font-size-17 align-middle me-1"></i> My Wallet</a>
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i class="mdi mdi-cog font-size-17 align-middle me-1"></i> Settings<span class="badge bg-success ms-auto">11</span></a>
+                        <a class="dropdown-item" href="#"><i class="mdi mdi-lock-open-outline font-size-17 align-middle me-1"></i> Lock screen</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-danger" href="#"><i class="bx bx-power-off font-size-17 align-middle me-1 text-danger"></i> Logout</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== Left Sidebar Start ========== -->
+    <div class="vertical-menu">
+
+        <div data-simplebar class="h-100">
+
+            <!--- Sidemenu -->
+            <div id="sidebar-menu">
+                <!-- Left Menu Start -->
+                <ul class="metismenu list-unstyled" id="side-menu">
+
+                    <li>
+                        <a href="index.html" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>User Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Insurance Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Inquiries Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Policy Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Content Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Email Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Setup</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>CRM</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect">
+                            <i class="ti-home"></i>
+                            <span>Task Management</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Sidebar -->
+        </div>
+    </div>
+    <!-- Left Sidebar End -->
+
+
+
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="main-content dashboard">
+
+        <div class="page-content report">
+            <div class="container-fluid">
+                <!-- start page title -->
+                <div class="page-title-box">
+                    <div class="row align-items-center">
+                        <div class="col-md-8">
+                            <h6 class="page-title">Total Sales</h6>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="float-end d-none d-md-block">
+                                <div class="dropdown">
+                                    <button class="btn btn-primary  dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="mdi mdi-cog me-2"></i> Settings
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title -->
+
+                <div class="row">
+                    <div class="card-30">
+                        <div class="card mini-stat bg-theme-primary card-theme" >
+                            <div class="card-body">
+                                <div class="mb-4 d-flex justify-content-between">
+                                    <div class="title-card-theme">
+                                        <h5 class="font-size-16 text-uppercase">Total Revenue this month</h5>
+                                        <h4 class="fw-bold font-size-24 text-black">+ 50.5%</h4>
+                                    </div>
+                                    <div class="icon-theme-card blue">
+                                        <i class="mdi mdi-stethoscope"></i>
+                                    </div>
+                                </div>
+                                <div class="progress mb-4">
+                                    <div class="progress-bar bg-theme-primary-blue" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-40">
+                        <div class="row">
+                            <div class="card mini-stat bg-theme-primary  card-theme ">
+                                <div class="card-body">
+                                    <div class="mb-4 d-flex justify-content-between">
+                                        <div class="title-card-theme">
+                                            <h5 class="font-size-16 text-uppercase">Expected Commision this Month</h5>
+                                            <h4 class="fw-bold font-size-24 text-black">1,6k AED</h4>
+                                        </div>
+                                        <div class="icon-theme-card blue">
+                                            <i class="mdi mdi-stethoscope"></i>
+                                        </div>
+                                    </div>
+                                    <div class="pt-2">
+                                        <p class="text-gray mb-0 mt-1"> <span class="text-danger"> <i class="ion ion-md-arrow-dropdown"></i>
+                                            </span> <span class="text-danger">12%</span> Since last month</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-30">
+                        <div class="card mini-stat bg-theme-primary card-theme" >
+                            <div class="card-body">
+                                <div class="mb-4 d-flex justify-content-between">
+                                    <div class="title-card-theme">
+                                        <h5 class="font-size-16 text-uppercase">Total Quotes</h5>
+                                        <h4 class="fw-bold font-size-24 text-black">75.5%</h4>
+                                    </div>
+                                    <div class="icon-theme-card blue">
+                                        <i class="mdi mdi-stethoscope"></i>
+                                    </div>
+                                </div>
+                                <div class="progress mb-4">
+                                    <div class="progress-bar bg-theme-primary-blue" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- end row -->
+
+                <div class="row align-items-center">
+                    <div class="col-xl-1 pe-0">
+                        <div class="icon report-icon yellow">
+                            <i class="mdi mdi-format-quote-close"></i>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 ps-0">
+                        <h4>Quotes Report</h4>
+                        <h6>Lorem ipsum dolar</h6>
+                    </div>
+
+                    <div class="col-xl-5 ps-0">
+                        <div class="float-end d-none d-md-block">
+                            <button class="btn btn-outline-primary-theme "> <i class="mdi mdi-download"></i> Download Report</button>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- end row -->
+                <div class="row mt-lg-3">
+                    <div class="card-30">
+                        <div class="card mini-stat bg-theme-primary card-theme" >
+                            <div class="card-header bg-transparent pb-0">
+                                <h4 class="m-0 text-black">Quotes by users</h4>
+                            </div>
+                            <div class="card-body">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs nav-tabs-custom border-0" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-bs-toggle="tab" href="#weekly" role="tab">
+                                            <span class="d-none d-md-block">Weekly</span><span class="d-block d-md-none"><i class="mdi mdi-home-variant h5"></i></span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#monthly" role="tab">
+                                            <span class="d-none d-md-block">Monthly</span><span class="d-block d-md-none"><i class="mdi mdi-account h5"></i></span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#yearly" role="tab">
+                                            <span class="d-none d-md-block">Yearly</span><span class="d-block d-md-none"><i class="mdi mdi-account h5"></i></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content pt-lg-1">
+                                    <div class="tab-pane active" id="weekly" role="tabpanel">
+                                        <div id="chart-with-area-weekly" class="ct-chart ct-golden-section" dir="ltr"></div>
+                                    </div>
+                                    <div class="tab-pane" id="monthly" role="tabpanel">
+                                        <div id="chart-with-area-monthly" class="ct-chart ct-golden-section" dir="ltr"></div>
+                                    </div>
+                                    <div class="tab-pane" id="yearly" role="tabpanel">
+                                        <div id="chart-with-area-yearly" class="ct-chart ct-golden-section" dir="ltr"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-40">
+                        <div class="row">
+                            <div class="card mini-stat bg-theme-primary  card-theme ">
+                                <div class="card-header bg-transparent pb-0 row">
+                                    <div class="col-lg-6">
+                                        <h4 class="m-0 text-black">Total Quotes</h4>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="float-end d-none d-md-block">
+                                            <div class="btn-group me-1 mt-2 filter">
+                                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Month
+                                                    <i class="mdi mdi-chevron-down"></i>
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <button class="dropdown-item month" id="01">Jan</button>
+                                                    <button class="dropdown-item month" id="02">Feb</button>
+                                                    <button class="dropdown-item month" id="03">March</button>
+                                                    <button class="dropdown-item month" id="04">April</button>
+                                                    <button class="dropdown-item month" id="05">May</button>
+                                                    <button class="dropdown-item month" id="06">June</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body" >
+                                    <div class="d-flex flex-row justify-content-between align-items-center mt-4">
+                                        <p class="m-0">Lorem Ipsum</p>
+                                        <div class="progress w-50">
+                                            <div class="progress-bar bg-theme-primary-blue" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="m-0">25%</p>
+                                    </div>
+                                    <div class="d-flex flex-row justify-content-between align-items-center my-5">
+                                        <p class="m-0">Lorem Ipsum</p>
+                                        <div class="progress w-50">
+                                            <div class="progress-bar bg-theme-primary-blue" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="m-0">75%</p>
+                                    </div>
+                                    <div class="d-flex flex-row justify-content-between align-items-center my-5">
+                                        <p class="m-0">Lorem Ipsum</p>
+                                        <div class="progress w-50">
+                                            <div class="progress-bar bg-theme-primary-blue" role="progressbar" style="width: 10%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="m-0">10%</p>
+                                    </div>
+                                    <div class="d-flex flex-row justify-content-between align-items-center mb-5">
+                                        <p class="m-0">Lorem Ipsum</p>
+                                        <div class="progress w-50">
+                                            <div class="progress-bar bg-theme-primary-blue" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="m-0">25%</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-30">
+                        <div class="card mini-stat bg-theme-primary card-theme" >
+                            <div class="card-header bg-transparent pb-0 text-center">
+                                <h4 class="m-0 text-black">Weekly</h4>
+                            </div>
+                            <div class="card-body">
+                                <div id="animating-donut" class="ct-chart ct-golden-section text-center" dir="ltr"></div>
+                                <div class="row justify-content-center">
+                                    <div class="col-sm-4">
+                                        <div class="text-center">
+                                            <p class="text-muted">Lorem Ipsum</p>
+                                            <h1 class="mb-0 text-primary-theme">65%</h1>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="text-center">
+                                            <p class="text-muted">Lorem Ipsum</p>
+                                            <h1 class="mb-0 text-danger">65%</h1>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="text-center">
+                                            <p class="text-muted">Lorem Ipsum</p>
+                                            <h1 class="mb-0 fw-bold text-warning">65%</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row align-items-center">
+                    <div class="col-xl-1 pe-0">
+                        <div class="icon report-icon bg-success">
+                            <i class="mdi mdi-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 ps-0">
+                        <h4>Claims & Revenue Report</h4>
+                        <h6>Lorem ipsum dolar</h6>
+                    </div>
+
+                    <div class="col-xl-5 ps-0">
+                        <div class="float-end d-none d-md-block">
+                            <button class="btn btn-outline-primary-theme "> <i class="mdi mdi-download"></i> Download Report</button>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- end row -->
+                <div class="row mt-lg-3">
+                    <div class="card-30">
+                        <div class="card mini-stat bg-theme-primary card-theme" >
+                            <div class="card-header bg-transparent pb-0 row">
+                                <div class="col-lg-6">
+                                    <h4 class="m-0 text-black">Total Quotes</h4>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="float-end d-none d-md-block">
+                                        <div class="btn-group me-1 mt-2 filter">
+                                            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Month
+                                                <i class="mdi mdi-chevron-down"></i>
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <button class="dropdown-item month" id="01">Jan</button>
+                                                <button class="dropdown-item month" id="02">Feb</button>
+                                                <button class="dropdown-item month" id="03">March</button>
+                                                <button class="dropdown-item month" id="04">April</button>
+                                                <button class="dropdown-item month" id="05">May</button>
+                                                <button class="dropdown-item month" id="06">June</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div id="claims" class="ct-chart ct-golden-section" dir="ltr"></div>
+
+                                <div class="row justify-content-between">
+                                    <div class="col-sm-6">
+                                        <div class="text-center">
+                                            <p class="m-0 font-size-24 text-primary-theme text-muted"> <i class="mdi mdi-arrow-top-right"></i> + 3,49%</p>
+                                            <p class="m-0">this month</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="text-center">
+                                            <p class="m-0 font-size-24 text-primary-theme text-muted opacity-50"> <i class="mdi mdi-arrow-bottom-right"></i> - 3,49%</p>
+                                            <p class="m-0">previous month</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-40">
+                        <div class="row">
+                            <div class="card mini-stat bg-theme-primary  card-theme ">
+                                <div class="card-header bg-transparent pb-0 row">
+                                    <div class="col-lg-6">
+                                        <h4 class="m-0 text-black">Total Quotes</h4>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div>
+                                                <div id="chart-revenue" class="ct-chart earning ct-golden-section">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end row -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-30">
+                        <div class="card mini-stat bg-theme-primary card-theme" >
+                            <div class="card-header bg-transparent pb-0">
+                                <h4 class="m-0 text-black">Quotes by users</h4>
+                            </div>
+                            <div class="card-body">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs nav-tabs-custom border-0" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-bs-toggle="tab" href="#total-revenue-weekly-section" role="tab">
+                                            <span class="d-none d-md-block">Weekly</span><span class="d-block d-md-none"><i class="mdi mdi-home-variant h5"></i></span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#total-revenue-monthly-section" role="tab">
+                                            <span class="d-none d-md-block">Monthly</span><span class="d-block d-md-none"><i class="mdi mdi-account h5"></i></span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#total-revenue-yearly-section" role="tab">
+                                            <span class="d-none d-md-block">Yearly</span><span class="d-block d-md-none"><i class="mdi mdi-account h5"></i></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content pt-lg-1">
+                                    <div class="tab-pane active" id="total-revenue-weekly-section" role="tabpanel">
+                                        <div id="total-revenue-weekly" class="ct-chart ct-golden-section" dir="ltr"></div>
+                                    </div>
+                                    <div class="tab-pane" id="total-revenue-monthly-section" role="tabpanel">
+                                        <div id="total-revenue-monthly" class="ct-chart ct-golden-section" dir="ltr"></div>
+                                    </div>
+                                    <div class="tab-pane" id="total-revenue-yearly-section" role="tabpanel">
+                                        <div id="total-revenue-yearly" class="ct-chart ct-golden-section" dir="ltr"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="section03">
+                    <div class="row align-items-center">
+                        <div class="col-xl-1 pe-0">
+                            <div class="icon report-icon bg-theme-primary-blue">
+                                <i class="mdi mdi-chart-bar-stacked"></i>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 ps-0">
+                            <h4>Commission Report</h4>
+                            <h6>Lorem ipsum dolar</h6>
+                        </div>
+
+                        <div class="col-xl-5 ps-0">
+                            <div class="float-end d-none d-md-block">
+                                <button class="btn btn-outline-primary-theme "> <i class="mdi mdi-download"></i> Download Report</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- end row -->
+                    <div class="row mt-lg-3">
+                        <div class="card-30">
+                            <div class="card mini-stat bg-theme-primary card-theme" >
+                                <div class="card-header bg-transparent pb-0">
+                                    <h4 class="m-0 text-black">Quotes by users</h4>
+                                </div>
+                                <div class="card-body">
+                                    <!-- Nav tabs -->
+                                    <ul class="nav nav-tabs nav-tabs-custom border-0" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" data-bs-toggle="tab" href="#commission-weekly-section" role="tab">
+                                                <span class="d-none d-md-block">Weekly</span><span class="d-block d-md-none"><i class="mdi mdi-home-variant h5"></i></span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#commission-monthly-section" role="tab">
+                                                <span class="d-none d-md-block">Monthly</span><span class="d-block d-md-none"><i class="mdi mdi-account h5"></i></span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#commission-yearly-section" role="tab">
+                                                <span class="d-none d-md-block">Yearly</span><span class="d-block d-md-none"><i class="mdi mdi-account h5"></i></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content pt-lg-1">
+                                        <div class="tab-pane active" id="commission-weekly-section" role="tabpanel">
+                                            <div id="commission-weekly" class="ct-chart ct-golden-section" dir="ltr"></div>
+                                        </div>
+                                        <div class="tab-pane" id="commission-monthly-section" role="tabpanel">
+                                            <div id="commission-monthly" class="ct-chart ct-golden-section" dir="ltr"></div>
+                                        </div>
+                                        <div class="tab-pane" id="commission-yearly-section" role="tabpanel">
+                                            <div id="commission-yearly" class="ct-chart ct-golden-section" dir="ltr"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-40">
+                            <div class="card mini-stat bg-theme-primary card-theme" >
+                                <div class="card-header bg-transparent pb-0 text-center">
+                                    <h4 class="m-0 text-black">Weekly</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div id="commission_donut" class="ct-chart ct-golden-section text-center" dir="ltr"></div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-sm-4">
+                                            <div class="text-center">
+                                                <p class="text-muted">Lorem Ipsum</p>
+                                                <h1 class="mb-0 text-primary-theme">65%</h1>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="text-center">
+                                                <p class="text-muted">Lorem Ipsum</p>
+                                                <h1 class="mb-0 text-danger">65%</h1>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="text-center">
+                                                <p class="text-muted">Lorem Ipsum</p>
+                                                <h1 class="mb-0 fw-bold text-warning">65%</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-30">
+                            <div class="card mini-stat bg-theme-primary  card-theme ">
+                                <div class="card-header bg-transparent pb-0 row">
+                                    <div class="col-lg-6">
+                                        <h4 class="m-0 text-black">Total Quotes</h4>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="float-end d-none d-md-block">
+                                            <div class="btn-group me-1 mt-2 filter">
+                                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Month
+                                                    <i class="mdi mdi-chevron-down"></i>
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <button class="dropdown-item month" id="01">Jan</button>
+                                                    <button class="dropdown-item month" id="02">Feb</button>
+                                                    <button class="dropdown-item month" id="03">March</button>
+                                                    <button class="dropdown-item month" id="04">April</button>
+                                                    <button class="dropdown-item month" id="05">May</button>
+                                                    <button class="dropdown-item month" id="06">June</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body" >
+                                    <div class="d-flex flex-row justify-content-between align-items-center mt-4">
+                                        <p class="m-0">Lorem Ipsum</p>
+                                        <div class="progress w-50">
+                                            <div class="progress-bar bg-theme-primary-blue" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="m-0">25%</p>
+                                    </div>
+                                    <div class="d-flex flex-row justify-content-between align-items-center my-5">
+                                        <p class="m-0">Lorem Ipsum</p>
+                                        <div class="progress w-50">
+                                            <div class="progress-bar bg-theme-primary-blue" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="m-0">75%</p>
+                                    </div>
+                                    <div class="d-flex flex-row justify-content-between align-items-center my-5">
+                                        <p class="m-0">Lorem Ipsum</p>
+                                        <div class="progress w-50">
+                                            <div class="progress-bar bg-theme-primary-blue" role="progressbar" style="width: 10%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="m-0">10%</p>
+                                    </div>
+                                    <div class="d-flex flex-row justify-content-between align-items-center mb-4">
+                                        <p class="m-0">Lorem Ipsum</p>
+                                        <div class="progress w-50">
+                                            <div class="progress-bar bg-theme-primary-blue" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="m-0">25%</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div> <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+
+
+    </div>
+    <!-- end main content-->
+
+</div>
+<!-- END layout-wrapper -->
+
+<!-- Right Sidebar -->
+<div class="right-bar">
+    <div data-simplebar class="h-100">
+        <div class="rightbar-title px-3 py-4">
+            <a href="javascript:void(0);" class="right-bar-toggle float-end">
+                <i class="mdi mdi-close noti-icon"></i>
+            </a>
+            <h5 class="m-0">Settings</h5>
+        </div>
+
+        <!-- Settings -->
+        <hr class="mt-0" />
+        <h6 class="text-center">Choose Layouts</h6>
+
+        <div class="p-4">
+            <div class="mb-2">
+                <img src="assets/images/layouts/layout-1.jpg" class="img-fluid img-thumbnail" alt="">
+            </div>
+            <div class="form-check form-switch mb-3">
+                <input type="checkbox" class="form-check-input theme-choice" id="light-mode-switch" checked />
+                <label class="form-check-label" for="light-mode-switch">Light Mode</label>
+            </div>
+
+            <div class="mb-2">
+                <img src="assets/images/layouts/layout-2.jpg" class="img-fluid img-thumbnail" alt="">
+            </div>
+            <div class="form-check form-switch mb-3">
+                <input type="checkbox" class="form-check-input theme-choice" id="dark-mode-switch" data-bsStyle="assets/css/bootstrap-dark.min.css"
+                       data-appStyle="assets/css/app-dark.min.css" />
+                <label class="form-check-label" for="dark-mode-switch">Dark Mode</label>
+            </div>
+
+            <div class="mb-2">
+                <img src="assets/images/layouts/layout-3.jpg" class="img-fluid img-thumbnail" alt="">
+            </div>
+            <div class="form-check form-switch mb-5">
+                <input type="checkbox" class="form-check-input theme-choice" id="rtl-mode-switch" data-appStyle="assets/css/app-rtl.min.css" />
+                <label class="form-check-label" for="rtl-mode-switch">RTL Mode</label>
+            </div>
+            <div class="d-grid">
+                <a href="https://1.envato.market/grNDB" class="btn btn-primary mt-3" target="_blank"><i class="mdi mdi-cart me-1"></i> Purchase Now</a>
+            </div>
+        </div>
+    </div> <!-- end slimscroll-menu-->
+</div>
+<!-- /Right-bar -->
+
+<!-- Right bar overlay-->
+<div class="rightbar-overlay"></div>
+
+<!-- JAVASCRIPT -->
+<script src="assets/libs/jquery/jquery.min.js"></script>
+<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/libs/metismenu/metisMenu.min.js"></script>
+<script src="assets/libs/simplebar/simplebar.min.js"></script>
+<script src="assets/libs/node-waves/waves.min.js"></script>
+
+
+<!-- Peity chart-->
+<script src="assets/libs/peity/jquery.peity.min.js"></script>
+
+<!-- Required datatable js -->
+<script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+
+<!-- Plugin Js-->
+<script src="assets/libs/chartist/chartist.min.js"></script>
+<script src="assets/libs/chartist-plugin-tooltips/chartist-plugin-tooltip.min.js"></script>
+
+
+<script src="assets/js/app.js"></script>
+<script>
+    new Chartist.Line(
+        "#chart-with-area-weekly",
+        { labels: ["Jan","Feb","Mar","Apr","May","Jun"], series: [[350,400,600,220,350,400]] },
+        { low: 0, showArea: false,fullWidth:true,axisY: {
+                labelInterpolationFnc: function(value) {
+                    return (value / 1) + '$';
+                }
+            }, plugins: [Chartist.plugins.tooltip()] }
+    )
+    $('a[href$="#monthly"]').click(()=>{
+        new Chartist.Line(
+            "#chart-with-area-monthly",
+            { labels: ["Jan","Feb","Mar","Apr","May","Jun"], series: [[500,400,200,0,10,400]] },
+            { low: 0, showArea: false,fullWidth:true,axisY: {
+                    labelInterpolationFnc: function(value) {
+                        return (value / 1) + '$';
+                    }
+                }, plugins: [Chartist.plugins.tooltip()] }
+        )
+    })
+    $('a[href$="#yearly"]').click(()=>{
+        new Chartist.Line(
+            "#chart-with-area-yearly",
+            { labels: ["Jan","Feb","Mar","Apr","May","Jun"], series: [[1,200,5,0,1,1]] },
+            { low: 0, showArea: false,fullWidth:true,axisY: {
+                    labelInterpolationFnc: function(value) {
+                        return (value / 1) + '$';
+                    }
+                }, plugins: [Chartist.plugins.tooltip()] }
+        )
+    })
+    var chart = new Chartist.Pie(
+        "#animating-donut",
+        { series: [54, 28, 17], labels: [1, 2, 3] },
+        { height: '250px' ,donut: !0, showLabel: !1,donutWidth: 10, plugins: [Chartist.plugins.tooltip()] }
+    );
+
+
+    new Chartist.Pie("#claims", {
+        series: [80,20]
+    }, {
+        donut: true,
+        donutWidth: 15,
+        startAngle: 270,
+        total: 200,
+        showLabel: false,
+        height: '350px'
+    });
+
+    new Chartist.Bar(
+        "#chart-revenue",
+        { labels: [1, 2, 3, 4, 5, 6, 7, 8], series: [[5, 4, 7, 8, 5, 1, 5, 4],[5, 9, 3, 2, 5, 4, 5, 2]] },
+        { height: '350px', low: 0, showArea: !0, plugins: [Chartist.plugins.tooltip()] }
+    );
+
+    new Chartist.Line(
+        "#total-revenue-weekly",
+        { labels: ["Jan","Feb","Mar","Apr","May","Jun"], series: [[350,400,600,220,350,400]] },
+        { low: 0, showArea: false,fullWidth:true,axisY: {
+                labelInterpolationFnc: function(value) {
+                    return (value / 1) + '$';
+                }
+            }, plugins: [Chartist.plugins.tooltip()] }
+    )
+    $('a[href$="#total-revenue-monthly-section"]').click(()=>{
+        new Chartist.Line(
+            "#total-revenue-monthly",
+            { labels: ["Jan","Feb","Mar","Apr","May","Jun"], series: [[500,400,200,0,10,400]] },
+            { low: 0, showArea: false,fullWidth:true,axisY: {
+                    labelInterpolationFnc: function(value) {
+                        return (value / 1) + '$';
+                    }
+                }, plugins: [Chartist.plugins.tooltip()] }
+        )
+    })
+    $('a[href$="#total-revenue-yearly-section"]').click(()=>{
+        new Chartist.Line(
+            "#total-revenue-yearly",
+            { labels: ["Jan","Feb","Mar","Apr","May","Jun"], series: [[1,200,5,0,1,1]] },
+            { low: 0, showArea: false,fullWidth:true,axisY: {
+                    labelInterpolationFnc: function(value) {
+                        return (value / 1) + '$';
+                    }
+                }, plugins: [Chartist.plugins.tooltip()] }
+        )
+    })
+
+
+
+    new Chartist.Line(
+        "#commission-weekly",
+        { labels: ["Jan","Feb","Mar","Apr","May","Jun"], series: [[500,400,200,0,10,400]] },
+        { low: 0, showArea: false,fullWidth:true,axisY: {
+            labelInterpolationFnc: function(value) {
+                return (value / 1) + '$';
+            }
+        }, plugins: [Chartist.plugins.tooltip()] }
+    )
+
+
+    $('a[href$="#commission-yearly-section"]').click(()=>{
+        new Chartist.Line(
+            "#commission-yearly",
+            { labels: ["Jan","Feb","Mar","Apr","May","Jun"], series: [[200,20,111,0,400,150]] },
+            { low: 0, showArea: false,fullWidth:true,axisY: {
+                    labelInterpolationFnc: function(value) {
+                        return (value / 1) + '$';
+                    }
+                }, plugins: [Chartist.plugins.tooltip()] }
+        )
+    })
+
+    $('a[href$="#commission-monthly-section"]').click(()=>{
+        new Chartist.Line(
+            "#commission-monthly",
+            { labels: ["Jan","Feb","Mar","Apr","May","Jun"], series: [[1,200,5,0,1,1]] },
+            { low: 0, showArea: false,fullWidth:true,axisY: {
+                    labelInterpolationFnc: function(value) {
+                        return (value / 1) + '$';
+                    }
+                }, plugins: [Chartist.plugins.tooltip()] }
+        )
+    })
+
+    var comissiondount = new Chartist.Pie(
+        "#commission_donut",
+        { series: [54, 28, 17], labels: [1, 2, 3] },
+        { height: '200px' ,donut: !0, showLabel: !1,donutWidth: 10, plugins: [Chartist.plugins.tooltip()] }
+    );
+
+</script>
+
+</body>
+
+</html>
